@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teks Summarization</title>
+    <style>
+   body {
+    font-family: arial;
+    background-color: #EEEEEE;
+}
+
+header {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  display: flex;
+  height: 100px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  align-items: center;
+  margin-left: 35%;
+  border-bottom: none;
+  color: #fc4a1a;
+}
+
+nav li {
+  list-style: none;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #fc4a1a;
+  padding: 10%;
+  background-color: #eee;
+  border-radius: 100px;
+}
+nav li:hover {
+color: #000;
+cursor: pointer;
+}
+header img{
+  width: 90px;
+  border-radius: 50px;
+  padding: 5%;
+  margin-left: 2%;
+}
+.takeline {
+  font-size: 16px;
+  text-align: left;
+  color: #eee;
+  padding: 1%;
+}
+.teks{
+  margin: auto;
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: large;
+}
+.teks h1{
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+}
+footer {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  color: #eee;
+  text-align: center;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  padding-top: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+    </style>
+  </head>
+
+  <body>
+        <header>
+          <link rel="icon" href="https://i.ibb.co/mvbjMgJ/gambar1.png" type="image/gif" sizes="50x50";">
+          <div class="container">
+            <img src="https://i.ibb.co/mvbjMgJ/gambar1.png" alt="Teks Summarization logo">
+          </div>
+          <h3 class="takeline">Meringkas Teks dengan Cepat dan Efisien: <br> Gabungkan Kemampuan dan Teknologi Terbaik dengan Website Summarization Kami</h3>
+            
+          <nav>
+            <li><a style="text-decoration:none" href="{{ url_for('index') }}">Home</a></li>
+            <li><a style="text-decoration:none" href="{{ url_for('about') }}">About</a></li>
+          </nav>
+        </header>
+        <form action="/about" method="post">
+      <section class="teks">
+        <h1>Tentang Kami</h1>
+        <br>
+          Halaman ini dibuat untuk memberikan informasi tentang siapa yang membuat situs web ini dan untuk apa situs web ini digunakan. Situs web ini dibuat oleh Bima Sanjaya, lahir pada tanggal 7 April 2002 di Kabupaten Semarang yang terkenal dengan keindahan alamnya. Bima Sanjaya adalah seorang mahasiswa yang sedang menempuh studinya di Pendidikan Teknik Informatika dan Komputer, jurusan Teknik Elektro, Fakultas Teknik, Universitas Negeri Semarang.
+<br><br>
+Saya membuat situs web ini sebagai salah satu syarat kelulusan dalam menyelesaikan skripsi yang berjudul "Teks Summarization". Situs web ini merupakan hasil dari pemikiran dan kerja keras Saya dalam menyelesaikan salah satu syarat wajib untuk kelulusan. Saya berharap bahwa situs web ini dapat memberikan manfaat bagi para pengguna yang membutuhkan fitur teks summarization.
+<br><br>
+Petunjuk penggunaan situs web ini juga tersedia pada halaman ini. Saya berharap bahwa para pengguna dapat menggunakan situs web ini dengan mudah dan nyaman. Jika ada masalah atau kendala dalam menggunakan situs web ini, pengguna dapat menghubungi Saya melalui kontak yang tersedia pada halaman ini.
+<br><br>
+Saya berharap bahwa situs web ini dapat memberikan solusi bagi para pengguna yang membutuhkan fitur teks summarization. Saya juga berharap bahwa situs web ini dapat menjadi salah satu sumber informasi yang berguna bagi para pengguna. 
+<br><br>
+<i>More Info : 0895340968777</i>
+</p>
+      </section>
+        </form>
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; 2023 Teks Summarization</p>
+        <p>All rights reserved</p>
+      </div>
+    </footer>    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

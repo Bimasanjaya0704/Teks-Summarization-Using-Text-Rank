@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teks Summarization</title>
+    <style>
+   body {
+    font-family: arial;
+    background-color: #EEEEEE;
+}
+
+header {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  display: flex;
+  height: 100px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  align-items: center;
+  margin-left: 35%;
+  border-bottom: none;
+  color: #fc4a1a;
+}
+
+nav li {
+  list-style: none;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #fc4a1a;
+  padding: 10%;
+  background-color: #eee;
+  border-radius: 100px;
+}
+nav li:hover {
+color: #000;
+cursor: pointer;
+}
+header img{
+  width: 90px;
+  border-radius: 50px;
+  padding: 5%;
+  margin-left: 2%;
+}
+.container{
+justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.takeline {
+  font-size: 16px;
+  text-align: left;
+  color: #eee;
+  padding: 1%;
+}
+.masukan{
+  margin-top: 2%;
+}
+.btn-orange-moon {
+background: linear-gradient(to right, #f7b733, #fc4a1a);
+color: #fff;
+margin-top: 10px;
+margin-bottom: 10px;
+border: 3px solid #eee;
+padding: 10px 50px;
+font-size: 15px;
+border: none;
+cursor: pointer;
+
+}
+.hasum{
+font-style: italic;
+font-size: 12px;
+padding: 1px;
+margin-bottom: 0%;
+}
+.teks{
+  margin: auto;
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: large;
+}
+.teks h1{
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+}
+footer {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  color: #eee;
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  padding-top: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+    </style>
+  </head>
+
+  <body>
+        <header>
+          <link rel="icon" href="https://i.ibb.co/mvbjMgJ/gambar1.png" type="image/gif" sizes="50x50";">
+          <div class="container">
+            <img src="https://i.ibb.co/mvbjMgJ/gambar1.png" alt="Teks Summarization logo">
+          </div>
+          <h3 class="takeline">Meringkas Teks dengan Cepat dan Efisien: <br> Gabungkan Kemampuan dan Teknologi Terbaik dengan Website Summarization Kami</h3>
+            
+          <nav>
+            <li><a style="text-decoration:none" href="{{ url_for('index') }}">Home</a></li>
+            <li><a style="text-decoration:none" href="{{ url_for('about') }}">About</a></li>
+          </nav>
+        </header>
+
+      <form action="/" method="post">
+         <textarea name="text" 
+              class="masukan"
+              cols="100" 
+              rows="30"
+              placeholder="Masukan Teks"
+              required="required" 
+             >{{ text }}</textarea>
+            <div class="tombol">
+		    <button class="col btn btn-orange-moon btn-rounded">Summary</button>
+		</div>
+
+          <div class="hasum">
+            <h3>Hasil Summarization</h3>
+          </div>
+            <textarea name="summary" 
+            class="hasil"
+            cols="100" 
+            rows="10"> {{ summary }} </textarea>
+      </form>
+      <section class="teks">
+        <h1>Apa itu Teks Summarization ?</h1>
+        <p>
+          Text summarization adalah suatu proses pembuatan ringkasan dari teks asli yang lebih panjang. Tujuannya adalah untuk menghasilkan ringkasan yang memberikan informasi utama dari teks asli tanpa menghilangkan makna penting dari teks tersebut. Sejarah teks summarization bisa ditemukan sejak tahun 1950-an, ketika para ahli komputer mulai berfokus pada bagaimana memproses informasi secara otomatis.
+<br>
+Pada tahun 1960-an, para ilmuwan komputer mulai mengembangkan metode teks summarization yang menggunakan algoritma statistik. Mereka menemukan bahwa beberapa kalimat dalam teks dapat memberikan informasi yang sama dan dapat digabungkan menjadi satu kalimat ringkasan. Metode ini membantu untuk mengurangi ukuran teks dan membuat teks lebih mudah dibaca dan dipahami.
+<br>
+Pada tahun 1980-an, teknologi pemrosesan teks mengalami perkembangan yang signifikan dan para ahli komputer mulai menggunakan algoritma yang lebih maju untuk mengekstrak informasi dari teks. Ini membantu untuk meningkatkan keakuratan ringkasan dan membuat teks lebih mudah dibaca dan dipahami.
+<br>
+Pada tahun 1990-an, teknologi pemrosesan teks semakin canggih dan para ahli komputer mulai mengembangkan metode teks summarization yang lebih baik. Mereka menggunakan algoritma yang lebih kompleks dan lebih maju untuk mengekstrak informasi dari teks dan membuat ringkasan yang lebih akurat dan berkualitas.
+<br>
+Sampai sekarang, teks summarization menjadi bagian penting dari teknologi pemrosesan teks dan digunakan dalam berbagai bidang, seperti jurnalistik, bisnis, dan ilmu pengetahuan. Teknologi ini membantu untuk mengurangi waktu dan usaha yang diperlukan untuk membaca dan memahami teks yang lebih panjang, dan membuat informasi lebih mudah diakses dan diterima oleh pengguna.
+<br>
+Manfaat dari teks summarization sangat banyak, seperti membuat informasi lebih mudah diterima dan dipahami, mempercepat proses membaca dan memahami teks, membuat informasi lebih mudah diakses, dan membantu untuk meminimalkan biaya dan waktu yang diperlukan untuk membaca dan memahami teks.
+        </p>
+      </section>
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; 2023 Teks Summarization</p>
+        <p>All rights reserved</p>
+      </div>
+    </footer>    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
